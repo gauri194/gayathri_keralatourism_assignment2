@@ -1,0 +1,168 @@
+body{
+    margin: 0;
+    padding: 0;
+    background:linear-gradient(#e3c4eb,rgb(91, 213, 243),#166ccf) ;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar{
+    background: transparent;
+    opacity: 0.8;
+    margin-top: 0;
+}
+
+.navbar a{
+    float: right;
+    color: white;
+    padding: 10px;
+    border: 2px solid;
+    margin-top: 15px;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+    border: none;
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin-right: 5%;
+}
+
+.navbar a:hover{
+    -webkit-transition: 0.5s ease-in-out;
+transition: 0.5s ease-in-out;
+border-bottom: 0.5px solid black;
+
+
+visibility: visible
+}
+
+.navbar img{
+    height: 5rem;
+    padding: 2px;
+    margin-left: 25px;
+    margin-top:7px;
+}
+
+.navbar h1{
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}
+
+.container{
+    width: 1280px;
+    margin: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.container .box{
+    
+    position: relative;
+    width: 250px;
+    height: 133px;
+    background: crimson;
+    margin: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+
+}
+
+.container .box .imgBox{
+    position: relative;
+    overflow: hidden;
+}
+
+.container .box .imgBox img{
+    max-width: 100%;
+    transition: transform 2s ;
+}
+
+.container .box:hover .imgBox img{
+    transform: scale(1.2);
+}
+
+.container .box .details{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background:white;
+    opacity: 0.8;
+    transform: scaleY(0);
+    transition: transform .5s ease-in-out;
+    text-decoration: none;
+    text-align: center;
+    
+
+
+}
+
+.container .box:hover .details {
+    background-color:white;
+    opacity: 0.8;
+    transform: translateY(0);
+    transition: transform .5s ease-in-out;
+    text-decoration: none;
+    text-align: center;
+    
+    
+}
+
+
+.disbtn{
+    color: black;
+    width: 80%;
+    align-content: center;
+    padding-top :10px;
+    font-size: 20px;
+    text-align: center;
+    margin-top:30px;
+    margin-right: 10px;
+    border: none;
+    background:white;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: "Nunito",sans-serif;
+    
+}
+.disbtn:hover{
+    
+    border-bottom: 2px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

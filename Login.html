@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - KERALA TOURISM</title>
+  <link rel="stylesheet" href="logsign.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+
+
+
+
+
+  
+  <div class="cont">
+    <a href="/index.html">
+      <button class="img-btn1" type="button">Back to Home</button>
+      </a>
+    
+    <div class="form sign-in">
+      <h2>Login </h2>
+      <div id="error"></div>
+      <!-- <div id="success"></div> -->
+      <form class="Form" onsubmit="return validation(event)" class="bg-light">
+        <label>
+          <span>Email</span>
+          <input type="text" class="email" id="email" autocomplete="off">
+        </label>
+
+        <label>
+          <span>Password</span>
+          <input type="password" class="pass" id="pass" autocomplete="off">
+          <p class="Strength" id="length"></p>
+        </label>
+      
+      <button class="submit">Login</button>
+   
+      <p class="forgot-pass">Forgot password?</p>
+    </form>
+      
+
+    </div>
+
+    
+  <div class="sub-cont">
+    <div class="img">
+      <div class="img-text">
+        <h2>New here?</h2>
+        <p>Sign up and discover more!</p>
+      </div>
+      
+      <a href="/Signup.html">
+        <button class="img-btn" type="button">Sign up</button>
+        </a>
+    
+  </div>
+</body>
+
+<script>
+  function validation(event)
+    {
+        //event.preventDefault();
+        
+        const email=document.getElementById('email').value;
+        const pass=document.getElementById('pass').value;
+       
+        const error=document.getElementById('error');
+        const success=document.getElementById('success');
+        var filter = /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+        let text;
+        
+      if(email=="")
+      {
+        text="**Please fill in the email-address**";
+        error.style.padding="10px";
+        error.innerHTML=text;
+        return false;
+      }
+      if(email.search(filter) == -1)
+      {
+        text="**Please enter a valid email-address**";
+        error.style.padding="10px";
+        error.innerHTML=text;
+        return false;
+      }
+      if(pass==""||pass.length<8)
+      {
+        text="**Please enter the password(atleast 8 characters long)**";
+        error.style.padding='10px';
+        error.innerHTML=text;
+        return false;
+      }
+      
+      console.log(pass.search(/[A-Z]/))
+      console.log(pass.search(/[a-z]/))
+      console.log(pass.search(/([0-9])/))
+      if(pass.search(/[A-Z]/)== -1)
+      {
+        text="**Password must contain atleast one uppercase character**";
+        error.style.padding='10px';
+        error.innerHTML=text;
+        return false;
+      }
+      if(pass.search(/[a-z]/)== -1)
+      {
+        text="**Password must contain atleast one lowercase character**";
+        error.style.padding='10px';
+        error.innerHTML=text;
+        return false;
+      }
+      if(pass.search(/([0-9])/) == -1)
+      {
+        text="**Password must contain atleast one digit from 0-9**";
+        error.style.padding='10px';
+        error.innerHTML=text;
+        return false;
+      }
+      
+      // success.innerHTML='Form successfully submitted'
+      // return true;
+    }
+    
+</script>
+<script>
+
+  pass.addEventListener('keyup',function(){
+
+      strength();
+  })
+  function strength()
+  {
+      var val=document.getElementById("pass").value;
+      var status=document.getElementById("length");
+      var counter=0;
+
+      if(val=="")
+      {
+        text="Please enter the password(atleast 8 characters long)";
+        error.style.padding='10px';
+        error.innerHTML=text;
+        return false;
+      }
+
+      if(val!="")
+      {
+          if(val.length<=5)
+              counter=1;
+          if(val.length > 5 && val.length<=10 )
+              counter=2;
+          if(val.length > 10 && val.length<=15 )
+              counter=3;
+
+
+          if(counter == 1)
+          {
+              status.innerHTML="POOR";
+              status.style.background="red";
+              status.style.color="white";
+              status.style.width="35%";
+              status.style.textAlign="center";
+              status.style.borderRadius="10px";
+          }
+          if(counter == 2)
+          {
+              status.innerHTML="MEDIUM";
+              status.style.background="orange";
+              status.style.color="white";
+              status.style.width="60%";
+              status.style.textAlign="center";
+              status.style.borderRadius="10px";
+          }
+          if(counter == 3)
+          {
+              status.innerHTML="STRONG";
+              status.style.background="green";
+              status.style.color="white";
+              status.style.width="100%";
+              status.style.textAlign="center";
+              status.style.borderRadius="10px";
+          }
+
+      }
+  }
+
+</script>
+
+</html>

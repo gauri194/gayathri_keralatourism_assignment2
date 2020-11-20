@@ -1,0 +1,132 @@
+body{
+    background: white;
+    font-family: "Nunito",sans-serif;
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar{
+    background:black;
+    opacity: 0.7;
+    margin-top: 0;
+}
+
+.navbar a{
+    float: right;
+    color: white;
+    padding: 10px;
+    border: 2px solid;
+    margin-top: 15px;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+    border: none;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.navbar a:hover{
+    -webkit-transition: 0.5s ease-in-out;
+transition: 0.5s ease-in-out;
+border-bottom: 0.5px solid black;
+
+
+visibility: visible
+}
+
+.navbar img{
+    height: 5rem;
+    padding: 2px;
+    margin-left: 20px;
+}
+
+.navbar h1{
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}
+
+
+.content{
+    
+    padding: 7%;
+    max-width: 55%;
+    height: 55%;
+    font-size: 1.2rem;
+    color:white;
+    background-color: black;
+    opacity:0.7;
+    margin-left: 15%;
+    margin-top: 3%;
+}
+.content h1{
+    text-align: center;
+    padding-bottom: 8%;
+    padding-top: 0%;
+}
+
+.content .info{
+    margin-top: 0%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.content-button{
+    align-items: center;
+    margin-left: 10%;
+    border-radius: 30px;
+}
+
+.disbtn{
+    margin:0;
+    border-top: 10px;
+    margin-left: 9%;
+    align-items: center;
+    background: white 0.8;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: solid;
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+}
+.disbtn:hover{
+    background: black;
+    color: white;
+    font-size: 1.2 rem;
+    font-weight: solid;
+    border-color: white;
+    cursor: pointer;  
+    border-radius: 30px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    color: white;
+    background-color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    padding: 7px;
+	word-spacing: 5px;
+	margin-top: 0px;
+}

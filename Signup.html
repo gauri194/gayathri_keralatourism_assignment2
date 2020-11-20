@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup - KERALA TOURISM</title>
+  <link rel="stylesheet" href="logsign.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquer/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs/cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script> -->
+
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=gmRELOPZqE6y4_iH47Mpn4c8vrN3iNYceoUj1cluDJhIDDEW234ED3z7jv935dW9gGoWWDpJh-RicOTBDw7Keal8NpCe519btqtSuvBX4QWrPTl0SpxUy2RTkPP7m0Wdw_gBQHFxyCO2B3bv1m-0AQ" charset="UTF-8"></script></head>
+<body>
+  <div class="cont">
+    <a href="/index.html">
+      <button class="img-btn1" type="button">Back to Home</button>
+      </a>
+      
+    <div class="form sign-in">
+      
+      <!-- <div id="success"></div> -->
+      <h2>Sign up</h2>
+      <div id="error"></div>
+      <!-- <div id="success"></div> -->
+      <form class="Form" onsubmit="return validation(event)" class="bg-light">
+      <label>
+        <span>Name</span>
+        <input type="name" name="Name" class="name" id="name" autocomplete="off">
+        <!-- <span id="nameid" class="text-danger font-weight-bold"></span> -->
+      </label>
+      <label>
+        <span>Email</span>
+        <input type="text" class="email" id="email" autocomplete="off">
+        <!-- <span id="emailid" class="text-danger font-weight-bold"></span> -->
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" class="pass" id="pass" autocomplete="off">
+        <!-- <span id="passid" class="text-danger font-weight-bold"></span> -->
+      ` <p class="Strength" id="length"></p>
+      </label>
+      <label>
+        <span>Phone number</span>
+        <input type="text" class="mobno" id="mobno" autocomplete="off">
+        <!-- <span id="phoneid" class="text-danger font-weight-bold"></span> -->
+      </label>
+        <button class="submit" >Signup now! </button>
+      </form>
+
+
+        
+
+    </div>
+
+    
+  <div class="sub-cont">
+    <div class="img">
+      <div class="img-text">
+        <h2>Already have an account?</h2>
+        <p>What are you waiting for?</p>
+      </div>
+      <a href="/Login.html">
+      <button class="img-btn" type="button">Login</button>
+      </a>
+  </div>
+
+<!-- <script src="./sigup.js"></script> -->
+
+<script>
+  function validation(event)
+  {
+      //event.preventDefault();
+      const name=document.getElementById('name').value;
+      const email=document.getElementById('email').value;
+      const pass=document.getElementById('pass').value;
+      const number=document.getElementById('mobno').value;
+      const error=document.getElementById('error');
+      const success=document.getElementById('success');
+      var filter = /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+      var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+      let text;
+
+      if(name=="")
+      {
+        text="**Please fill in the name**";
+        error.style.padding="10px";
+        error.innerHTML=text;
+        return false;
+      }
+      if(name.length<3)
+      {
+        text="**Name should more than 2 characters**";
+        error.style.padding="10px";
+        error.innerHTML=text;
+        return false;
+      }
+      if(email=="")
+      {
+        text="**Please fill in the email-address**";
+        error.style.padding="10px";
+        error.innerHTML=text;
+        return false;
+      }
+      if(email.search(filter)==-1)
+      {
+        text="**Please enter a valid email-address**";
+        error.style.padding="10px";
+        error.innerHTML=text;
+        return false;
+      }
+      if(pass==""||pass.length<8)
+      {
+        text="**Please enter the password(atleast 8 characters long)**";
+        error.style.padding='10px';
+        error.innerHTML=text;
+        return false;
+      }
+      // if(!pass.search(/[a-z]/))
+      // {
+      //   text="Password must contain atleast one lowercase character";
+      //   error.style.padding='10px';
+      //   error.innerHTML=text;
+      //   return false;
+      // }
+      console.log(pass.search(/[A-Z]/))
+      console.log(pass.search(/[a-z]/))
+      console.log(pass.search(/([0-9])/))
+      if(pass.search(/[A-Z]/)== -1)
+      {
+        text="**Password must contain atleast one uppercase character**";
+        error.style.padding='10px';
+        error.innerHTML=text;
+        return false;
+      }
+      if(pass.search(/[a-z]/)== -1)
+      {
+        text="**Password must contain atleast one lowercase character**";
+        error.style.padding='10px';
+        error.innerHTML=text;
+        return false;
+      }
+      if(pass.search(/([0-9])/) == -1)
+      {
+        text="**Password must contain atleast one digit from 0-9**";
+        error.style.padding='10px';
+        error.innerHTML=text;
+        return false;
+      }
+      
+      // if(number=="")
+      // {
+      //   text="Please fill in the Phone number";
+      //   error.style.padding="10px";
+      //   error.innerHTML=text;
+      //   return false;
+      // }
+      if(number.search(phoneno) == -1)
+      {
+        text="**Please enter a valid Phone number**";
+        error.style.padding="10px";
+        error.innerHTML=text;
+        return false;
+      }
+      // if(number.length<10 || number.length>10)
+      // {
+      //   text="Phone number should be 10 number long only";
+      //   error.style.padding="10px";
+      //   error.innerHTML=text;
+      //   return false;
+      // }
+      // if(isNaN(number))
+      // {
+      //   text="Phone number should contain only digits from 0-9";
+      //   error.style.padding="10px";
+      //   error.innerHTML=text;
+      //   return false;
+      // }
+      
+      
+
+      // success.style.padding='10px';
+      // success.innerHTML='Form successfully submitted'
+      // return true;
+    }
+
+
+</script>
+<script>
+
+  pass.addEventListener('keyup',function(){
+
+      strength();
+  })
+  function strength()
+  {
+      var val=document.getElementById("pass").value;
+      var status=document.getElementById("length");
+      var counter=0;
+
+      if(val=="")
+      {
+        text="Please enter the password(atleast 8 characters long)";
+        error.style.padding='10px';
+        error.innerHTML=text;
+        return false;
+      }
+
+      if(val!="")
+      {
+          if(val.length<=5)
+              counter=1;
+          if(val.length > 5 && val.length<=10 )
+              counter=2;
+          if(val.length > 10 && val.length<=15 )
+              counter=3;
+
+
+          if(counter == 1)
+          {
+              status.innerHTML="POOR";
+              status.style.background="red";
+              status.style.color="white";
+              status.style.width="35%";
+              status.style.textAlign="center";
+              status.style.borderRadius="10px";
+          }
+          if(counter == 2)
+          {
+              status.innerHTML="MEDIUM";
+              status.style.background="orange";
+              status.style.color="white";
+              status.style.width="60%";
+              status.style.textAlign="center";
+              status.style.borderRadius="10px";
+          }
+          if(counter == 3)
+          {
+              status.innerHTML="STRONG";
+              status.style.background="green";
+              status.style.color="white";
+              status.style.width="100%";
+              status.style.textAlign="center";
+              status.style.borderRadius="10px";
+          }
+
+      }
+  }
+
+</script>
+
+
+
+</body>
+
+</html>

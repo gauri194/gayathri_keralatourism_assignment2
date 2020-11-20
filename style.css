@@ -1,0 +1,107 @@
+body{
+	margin:0;
+	padding:0;
+	background:#fff;
+    font-family: 'Nunito', sans-serif;
+	color: #fff;
+	background:url('Images/Index.jpg');
+    background-size:cover;
+        
+}
+
+.banner{
+	
+	min-height: 1px;
+}
+
+
+.banner .navbar-brand{
+	color: #fff;
+	font-size:1.8em;
+	font-weight: 700;
+	margin-left: 5%;
+	
+}
+.banner .nav{
+    margin-right:5%;
+    margin-left: 5%;
+}
+.banner .nav li a{
+	color:white;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+.nav-btn{
+background: transparent;
+border: none;
+color: white;
+
+
+}
+
+
+.nav-btn:hover{
+-webkit-transition: 0.5s ease-in-out;
+transition: 0.5s ease-in-out;
+border-bottom: 0.5px solid white;
+
+
+visibility: visible
+
+
+}
+.navbar-brand img{
+		height: 5rem;
+		padding: 2px;
+		margin-left: 20px;
+}
+
+
+
+.banner .info{
+	margin-top:15%;
+	transform: translateY(-15%);
+}
+.banner .info h1{
+	font-size: 5em;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 1px;
+}
+.banner .info p{
+	font-size: 2em;
+	font-weight: 500;
+	color:white;
+	letter-spacing: 2px;
+}
+.banner .info a{
+	margin-left:50%;
+	transform: translateX(-50%);
+	color: #fff;
+	background: #03b3e9;
+	padding:10px 20px; 
+	font-size: 1.2em;
+    font-weight: 600;
+	border-radius: 30px;
+	width: 20%;
+}
+.banner .info a:hover{
+    background: white;
+    color: #03b3e9;
+}
+
+
+.footer{
+    color: white;
+    background-color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    padding: 7px;
+	word-spacing: 5px;
+	margin-top: 0px;
+}
